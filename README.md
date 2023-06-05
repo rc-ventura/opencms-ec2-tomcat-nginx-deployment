@@ -39,10 +39,14 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 ### 📋 As tecnologias de pré-requisitos:
 
 * Amazon Web Services (AWS): É necessário ter uma conta na AWS para criar e gerenciar uma instância EC2. 
+<Br>
 * EC2 (Elastic Compute Cloud): É o serviço da AWS que fornece capacidade computacional redimensionável na nuvem. Você precisará criar uma instância EC2 para hospedar o OpenCMS.
+<Br>
 * Tomcat: É um servidor web de código aberto que implementa as especificações Java Servlet e JavaServer Pages (JSP). O Tomcat será usado para executar o OpenCMS na instância EC2.
+<Br>
 * Nginx: É um servidor web de alto desempenho, proxy reverso e balanceador de carga. O Nginx será configurado como um proxy reverso para redirecionar as solicitações do OpenCMS.
-* OpenCms: O OpenCms é um sistema de gerenciamento de conteúdo de código aberto (CMS) que oferece recursos para criar, gerenciar e publicar conteúdo em um site ou portal. F
+<Br>
+* OpenCms: O OpenCms é um sistema de gerenciamento de conteúdo de código aberto (CMS) que oferece recursos para criar, gerenciar e publicar conteúdo em um site ou portal. 
 
 ### 📋 As tecnologias de pré-requisitos adicionais:
 
@@ -169,7 +173,8 @@ alter user postgres with password 'minhasenha';
 
 #### Etapa 1: Acessar o modo Wizard do OpenCms
  
- Primeiro certifique-se que o servidor Tomcat está incializado. Caso tenha dúvida de como realizar esta etapa volte a seção <a>Instalando e configurando um servidor TOMCAT<a>
+ Primeiro certifique-se que o servidor Tomcat está incializado. Caso tenha dúvida de como realizar esta etapa volte a seção <a href="#">Instalando e configurando um servidor TOMCAT</a>
+
 
  ```
 http://ip-publico-da-ec2:8080/opencms/setup/  
@@ -332,12 +337,8 @@ Dar exemplos
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg" width="80" />
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" width="80" />
  <img src="https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/a82f684c-1a85-4e58-802f-6135abb5c3bb" width="80" />
-<<<<<<< HEAD
 
-=======
->>>>>>> 0f7af8a1b8b05f792d1b500d7238c516cb886794
 
-  
    
 </div>
 
