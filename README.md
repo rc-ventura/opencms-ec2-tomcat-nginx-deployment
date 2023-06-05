@@ -35,6 +35,7 @@ Essa implantação proporciona um ambiente robusto e escalável para executar o 
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação em um servidor remoto mas almejo construir um tutorial para fins de desenvolvimento e teste localmente.
 
+<Br>
 
 ### 📋 As tecnologias de pré-requisitos:
 
@@ -53,6 +54,8 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 <Br>
 
 * OpenCms: O OpenCms é um sistema de gerenciamento de conteúdo de código aberto (CMS) que oferece recursos para criar, gerenciar e publicar conteúdo em um site ou portal. 
+
+<Br>
 
 ### 📋 As tecnologias de pré-requisitos adicionais:
 
@@ -181,7 +184,9 @@ alter user postgres with password 'minhasenha';
 
 #### Etapa 1: Acessar o modo Wizard do OpenCms
  
- Primeiro certifique-se que o servidor Tomcat está incializado. Caso tenha dúvida de como realizar esta etapa volte a seção <a href="#">Instalando e configurando um servidor TOMCAT</a>
+ * Primeiro certifique-se que o servidor Tomcat está incializado. Caso tenha dúvida de como realizar esta etapa volte a seção <a href="#">Instalando e configurando um servidor TOMCAT</a>
+
+ * Para maiores detalhes sobre a implantação, avance a seção <a href="#" > Implantação </a>
 
 
  ```
@@ -208,9 +213,10 @@ http://ip-publico-da-ec2:8080/opencms/setup/
 http://ip-publico-da-ec2:8080/opencms/opencms/overview  
  ```
   
-  
 
-https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/be8c65b1-750e-4ce2-bf0e-45ce6536cab3
+#### :anger: Instalando e configurando o Nginx:
+<hr>
+
 
 
 
@@ -252,40 +258,34 @@ https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/8748391
 ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * PostgreSQL</a>
 ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * OpenCms </a>
 
-<!--## 
+
 
 ## 📦 Implantação
   
   <Br>
   
+  https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/be8c65b1-750e-4ce2-bf0e-45ce6536cab3
+
   
-  #### :crystal_ball: DEVOPS
+  #### :crystal_ball: Docker
     
-  * Utilizando o Terraform provisiona uma infra-estrutura básica na  Digital Ocean.
-  * Criação de um cluster kubernetes com três serviços: backend, frontend e bancode dados
-  * Criação de 3 réplicas do backend e do frontend para escalonamento
-  * Criação de um load balancer aberto para internet que balanceia a carga para o frontend na porta 80 (http)
-  * Provisionamento de um máquina virtual (Droplet) para configurar a orquestração com o Jenkins.
-  * Criação do pipeline com o Jenkins CI utilizando o Docker e o DockerHub.
-  * Configuração d eum webhook no github para automatização do início do pipeline CI após um gitpush no repositório.
+  
     
     
-  #### :mag: SRE 
+  #### :mag: Terraform 
   
- * Criação de observabilidade utlizando o Helm para configurar o cluster Kubernetes.
- * Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para a porta 9090 (prometheus) 
- * Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para 3000 (grafana).
- * Criação dos dashboards das métricas funcionais e não funcionais da aplicação.
+ 
   
-  #### :computer: DEV
+  #### :computer: OpenCms
+
   
- * Promove alterações no código e ativa o trigger do pipeline.
- * Manutenção e implementação dos testes unitários 
- * Promove a cobertura do código nos testes.
-  
+  #### :computer:  Nginx
+
+
+
 <Br>
 
--->
+
 
 ## 🛠️ Tecnologias
 
