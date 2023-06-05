@@ -190,20 +190,29 @@ http://ip-publico-da-ec2:8080/opencms/setup/
 
 #### Etapa 2: Página de boas vindas
 
+![OpenCms Setup - Brave 05_06_2023 14_14_21](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/33cb25c0-4f58-4f40-b005-8590a4e7a21a)
 
 
 #### Etapa 3: Checagem de requisitos
 
+![OpenCms Setup - Brave 05_06_2023 14_14_32](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/9cd82240-d846-48e0-a170-89b8a368b534)
 
 #### Etapa 4: Conexão com Banco de Dados Postgresql
  
- 
+ ![OpenCms Setup - Brave 05_06_2023 14_14_52](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/438683f4-3297-41b2-9974-368f19ec16a3)
+
 #### Etapa 5: Acessar a aplicação OpenCms configurada
 
 
  ```
 http://ip-publico-da-ec2:8080/opencms/opencms/overview  
  ```
+  
+  
+
+https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/be8c65b1-750e-4ce2-bf0e-45ce6536cab3
+
+
 
 ## :airplane: Roadmap
  
