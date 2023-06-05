@@ -332,8 +332,13 @@ Dar exemplos
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg" width="80" />
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" width="80" />
  <img src="https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/a82f684c-1a85-4e58-802f-6135abb5c3bb" width="80" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0f7af8a1b8b05f792d1b500d7238c516cb886794
 
+  
+   
 </div>
 
 
