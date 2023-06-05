@@ -20,11 +20,12 @@ Essa implantação proporciona um ambiente robusto e escalável para executar o 
 
 <div align="center">
 
- <!--> <img  src=  "https://user-images.githubusercontent.com/87483916/232828544-c7af4a6d-8670-4616-a5bc-7ea078acdab2.png " width="1000" alt= "esquema do design da aplicação"/>
+  <!-- Um imagem>
   
 </div>
  
  -->
+
 ## :smile: Status do Projeto
 
 ![→_-em desenvolvimento-green](https://user-images.githubusercontent.com/87483916/224333868-804e4712-ecb7-492b-8c47-6c6bff8e3b7a.svg)
@@ -34,19 +35,17 @@ Essa implantação proporciona um ambiente robusto e escalável para executar o 
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação em um servidor remoto mas almejo construir um tutorial para fins de desenvolvimento e teste localmente.
 
-<!-->Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
--->
 
 ### 📋 As tecnologias de pré-requisitos:
 
- ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Amazon Web Services (AWS): É necessário ter uma conta na AWS para criar e gerenciar uma instância EC2. </a>
- ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * EC2 (Elastic Compute Cloud): É o serviço da AWS que fornece capacidade computacional redimensionável na nuvem. Você precisará criar uma instância EC2 para hospedar o OpenCMS. </a>
- ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Tomcat: É um servidor web de código aberto que implementa as especificações Java Servlet e JavaServer Pages (JSP). O Tomcat será usado para executar o OpenCMS na instância EC2. </a>
- ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Nginx: É um servidor web de alto desempenho, proxy reverso e balanceador de carga. O Nginx será configurado como um proxy reverso para redirecionar as solicitações do OpenCMS. </a>
+ ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Amazon Web Services (AWS)</a> : É necessário ter uma conta na AWS para criar e gerenciar uma instância EC2. 
+ ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * EC2 (Elastic Compute Cloud)</a>: É o serviço da AWS que fornece capacidade computacional redimensionável na nuvem. Você precisará criar uma instância EC2 para hospedar o OpenCMS.
+ ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Tomcat </a>: É um servidor web de código aberto que implementa as especificações Java Servlet e JavaServer Pages (JSP). O Tomcat será usado para executar o OpenCMS na instância EC2.
+ ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Nginx </a>: É um servidor web de alto desempenho, proxy reverso e balanceador de carga. O Nginx será configurado como um proxy reverso para redirecionar as solicitações do OpenCMS.
 
 ### 📋 As tecnologias de pré-requisitos adicionais:
 
-##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * PostgreSQL: É um sistema de gerenciamento de banco de dados relacional de código aberto. O PostgreSQL será utilizado como o banco de dados para o OpenCMS. É necessário ter conhecimento na instalação e configuração do PostgreSQL, além de habilidades básicas de administração de banco de dados. </a>
+##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * PostgreSQL</a>: É um sistema de gerenciamento de banco de dados relacional de código aberto. O PostgreSQL será utilizado como o banco de dados para o OpenCMS. É necessário ter conhecimento na instalação e configuração do PostgreSQL, além de habilidades básicas de administração de banco de dados.
 
 
 ### 🔧 Instalação
@@ -81,70 +80,88 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 <hr>
 
 
-# Etapa 1: Instalação do Java 11 LTS
+#### Etapa 1: Instalação do Java 11 LTS
  ```
 sudo apt-get update
 sudo apt install -y openjdk-11-jre-headless  
  ```
 
-# Etapa 2: Download e instalação do Tomcat 9.0.75
+#### Etapa 2: Download e instalação do Tomcat 9.0.75
  ```
 sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.75/bin/apache-tomcat-9.0.75.zip
  ```
 
-# Etapa 3: Download do unzip
+#### Etapa 3: Download do unzip
  ```
  sudo apt install -y unzip
  ```
-# Etapa 4: Descompactar o Tomcat para um diretório
+#### Etapa 4: Descompactar o Tomcat para um diretório
  ```
 sudo unzip apache-tomcat-9.0.75.zip -d /opt/tomcat
  ```
 
-# Etapa 5: Navegar até a pasta /bin do Tomcat
+#### Etapa 5: Navegar até a pasta /bin do Tomcat
  ```
 cd /opt/tomcat/apache-tomcat-9.0.75/bin/
  ```
 
-# Etapa 6: Permissões de execução para a /bin do Tomcat
+#### Etapa 6: Permissões de execução para a /bin do Tomcat
  ```
 sudo chmod +x *.sh
  ```
 
-# Etapa 7: Inicialização do servidor Tomcat
+#### Etapa 7: Inicialização do servidor Tomcat
  ```
 sudo ./startup.sh
  ```
 
-# Etapa 8: Download do OpenCms 15.0
+#### Etapa 8: Download do OpenCms 15.0
  ```
 cd /home/ubuntu
 sudo wget http://www.opencms.org/downloads/opencms/opencms-15.0.zip
  ```
 
-# Etapa 9: Implantação da aplicação OpenCms no servidor Tomcat
+#### Etapa 9: Implantação da aplicação OpenCms no servidor Tomcat
  ```
 sudo unzip opencms-15.0.zip -d /opt/tomcat/apache-tomcat-9.0.75/webapps/
  ```
 
-# Etapa 10: Reinicia o Tomcat
+#### Etapa 10: Reinicia o Tomcat
  ```
 sudo /opt/tomcat/apache-tomcat-9.0.75/bin/shutdown.sh
 sudo /opt/tomcat/apache-tomcat-9.0.75/bin/startup.sh
  ```
 
 
-#### :anger: Executando com o Maven:
+#### :anger: Instalando e configurando o Postgres:
 <hr>
 
-1. Clona ou faça download da aplicação.
-2. Abra o prompt de comando ou terminal.
-3. Selecione o caminho da pasta onde fez download.
-5. Execute o seguinte comando:
+
+#### Etapa 1:  Atualiza os pacotes disponíveis no sistema
+
  ```
- mvn spring-boot:run
+sudo apt-get update
  ```
 
+#### Etapa 2:  Instala o PostgreSQL
+
+ ```
+sudo apt install -y postgresql
+ ```
+#### Etapa 3:  Acessa a conta de usuário "postgres" do PostgreSQL
+
+ ```
+sudo su - postgres
+ ```
+#### Etapa 4:  Conecta-se ao banco de dados "postgres" como o usuário "postgres"
+
+```
+psql -d postgres -U postgres
+ ```
+#### Etapa 5:  Altera a senha do usuário "postgres"
+```
+alter user postgres with password 'minhasenha';
+```
 
 ## :scroll: Funcionalidades
 
