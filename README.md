@@ -38,14 +38,15 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ### 📋 As tecnologias de pré-requisitos:
 
- ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Amazon Web Services (AWS)</a> : É necessário ter uma conta na AWS para criar e gerenciar uma instância EC2. 
- ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * EC2 (Elastic Compute Cloud)</a>: É o serviço da AWS que fornece capacidade computacional redimensionável na nuvem. Você precisará criar uma instância EC2 para hospedar o OpenCMS.
- ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Tomcat </a>: É um servidor web de código aberto que implementa as especificações Java Servlet e JavaServer Pages (JSP). O Tomcat será usado para executar o OpenCMS na instância EC2.
- ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Nginx </a>: É um servidor web de alto desempenho, proxy reverso e balanceador de carga. O Nginx será configurado como um proxy reverso para redirecionar as solicitações do OpenCMS.
+#####  * Amazon Web Services (AWS): É necessário ter uma conta na AWS para criar e gerenciar uma instância EC2. 
+#####  * EC2 (Elastic Compute Cloud): É o serviço da AWS que fornece capacidade computacional redimensionável na nuvem. Você precisará criar uma instância EC2 para hospedar o OpenCMS.
+#####  * Tomcat: É um servidor web de código aberto que implementa as especificações Java Servlet e JavaServer Pages (JSP). O Tomcat será usado para executar o OpenCMS na instância EC2.
+#####  * Nginx: É um servidor web de alto desempenho, proxy reverso e balanceador de carga. O Nginx será configurado como um proxy reverso para redirecionar as solicitações do OpenCMS.
+#####  * OpenCms: O OpenCms é um sistema de gerenciamento de conteúdo de código aberto (CMS) que oferece recursos para criar, gerenciar e publicar conteúdo em um site ou portal. F
 
 ### 📋 As tecnologias de pré-requisitos adicionais:
 
-##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * PostgreSQL</a>: É um sistema de gerenciamento de banco de dados relacional de código aberto. O PostgreSQL será utilizado como o banco de dados para o OpenCMS. É necessário ter conhecimento na instalação e configuração do PostgreSQL, além de habilidades básicas de administração de banco de dados.
+#####  * PostgreSQL: É um sistema de gerenciamento de banco de dados relacional de código aberto. O PostgreSQL será utilizado como o banco de dados para o OpenCMS. É necessário ter conhecimento na instalação e configuração do PostgreSQL, além de habilidades básicas de administração de banco de dados.
 
 
 ### 🔧 Instalação
@@ -162,6 +163,34 @@ psql -d postgres -U postgres
 ```
 alter user postgres with password 'minhasenha';
 ```
+#### :anger: Configurando aplicação OpenCMS:
+<hr>
+
+
+#### Etapa 1: Acessar o modo Wizard do OpenCms
+ 
+ Primeiro certifique-se que o servidor Tomcat está incializado. Caso tenha dúvida de como realizar esta etapa volte a seção <a>Instalando e configurando um servidor TOMCAT<a>
+
+ ```
+http://ip-publico-da-ec2:8080/opencms/setup/  
+ ```
+
+#### Etapa 2: Página de 
+
+#### Etapa 3: Download do unzip
+ ```
+ sudo apt install -y unzip
+ ```
+#### Etapa 4: Descompactar o Tomcat para um diretório
+ ```
+sudo unzip apache-tomcat-9.0.75.zip -d /opt/tomcat
+ ```
+
+#### Etapa 5: Navegar até a pasta /bin do Tomcat
+ ```
+cd /opt/tomcat/apache-tomcat-9.0.75/bin/
+ ```
+
 
 ## :scroll: Funcionalidades
 
@@ -171,7 +200,6 @@ alter user postgres with password 'minhasenha';
 
 * Conversor de câmbio entre um par de moedas.
 
-https://user-images.githubusercontent.com/87483916/224521177-28dfcd7d-a7f8-4b07-8165-008f50befc2d.mp4
 
 <Br>
 <Br>
@@ -211,90 +239,23 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
 - [ ] Provisionar a infraestrutura e iniciar os contêineres utilizando o Terraform e o Docker Compose.
 - [ ] Verificar se os contêineres estão em execução
 
-À medida que você avança neste roadmap, marque com um "x" as etapas que já foram concluídas. Isso ajudará a acompanhar o progresso até acessar a aplicação rodando.
-
-
- 
-
 
 ## :book: Documentação
   
-##### <a href="https://swagger.io/specification/)" target="_blank"> Swagger/OpenAPI </a>
-  
-<img src="https://user-images.githubusercontent.com/87483916/230924283-b1cf026a-ca3d-4ad0-a721-d762791bc960.png" alt="documentacão Api swagger"/>
+##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Amazon Web Services (AWS)</a> 
+##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * EC2 (Elastic Compute Cloud)</a>
+##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Tomcat </a>
+##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Nginx </a>
+##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * PostgreSQL</a>
+##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * OpenCms </a>
 
-
-<div align="center">
-
-https://user-images.githubusercontent.com/87483916/230924780-c11f1a06-e2d6-4cf1-a6d8-3e75b8c24f01.mp4
-
-  </div>
-  
-## ⚙️ Executando os testes
+<!--## ⚙️ Executando os testes
 <Br>
   
 * Overview dos testes feitos em Junit, Mockito, Rest Assured
 <Br>
    
  <div  style="display: inline-block" >
-
-<img src="https://user-images.githubusercontent.com/87483916/230927490-7ff73c1c-cc32-4e4f-bf0c-e899d38d96d9.png" alt="Imagem modificada" width="800"/>
-
-<img src="https://user-images.githubusercontent.com/87483916/230928492-249e0adf-1f74-48d4-9b40-b95a67b7846b.png" alt="Imagem modificada" width="800"/>
-<Br>
-<Br>
-  
-  ### :fast_forward: Testes de Integração
-  <Hr>
-  
-   #### :o: shouldConvertCurrencyAndSaveTransaction
-   * Simula uma consulta na API externa. 
-   * Retorna com a taxa de conversão.
-   * Processa a conversão.
-   * Salva no banco de dados a transação. 
-  <Br>
- <img src= "https://user-images.githubusercontent.com/87483916/230958891-d9ff3b4b-1f7f-43ef-96a4-fb72c2a47303.png" alt= "Imagem modificada" width="800"/>
-
-    
-  #### :o: Transaction Controller Feature
-  * Simula todos os endpoints da aplicação ao manipular uma transação
-  * Controller->Service->Repository
-  * GET, UPDATE, GET/ID, DELETE/ID, SAVE
-  <Br>
-  
-
-<img src="https://user-images.githubusercontent.com/87483916/230958940-8f6d3e33-36f8-4244-a334-59429143a0a1.png" alt=" Imagem modificada" width="800"/>
-
-<Br>
-
- ### :fast_forward: Testes Unitários
-<Hr>
- 
- #### :o: CurrencyExceptionHandler
- * Simula o controle de exceções
-  <Br>
-    
-  ![Sem título - Brave 10_04_2023 11_56_51](https://user-images.githubusercontent.com/87483916/230982651-7dbe2ae6-b3f4-4808-8c83-38cb4f8733d3.png)
-
-     
- #### :o: Currency Conversion
- * Simula uma conversão.
- * Chama a API Externa
- * Faz uma conversão do par USD para BRL.
-  <Br>
-    
- ![Sem título - Brave 10_04_2023 11_54_53](https://user-images.githubusercontent.com/87483916/230982897-a2460374-df92-43b4-8a68-ae14140fe758.png)
-
-    
-<Br>
-    
- #### :o: Transaction Service
-* Simula todas as manipulações de transações na camada de Serviços
-* Service->Repository
-    
-<Br>
- 
-![Sem título - Brave 10_04_2023 11_55_35](https://user-images.githubusercontent.com/87483916/230983762-5092a75c-d24e-4d28-8d41-6b3ee1b71449.png)
 
   
 </div>
@@ -319,7 +280,7 @@ Dar exemplos
 ```
 -->
   
-## 📦 Implantação
+<!-->## 📦 Implantação
   
   <Br>
   
@@ -357,24 +318,21 @@ Dar exemplos
   
 <Br>
 
-
+-->
 
 ## 🛠️ Tecnologias
 
  <div  style="display: inline-block" >
 
- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="80"  /> 
- <img src= "https://user-images.githubusercontent.com/87483916/224313415-17511f48-87e4-4d9d-98ed-01daba701270.png" width="80"/>  
- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"width="80" />
- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"width="80"  />
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="80"  /> 
+ <img src="src=https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="80"  />
  <img src= "https://user-images.githubusercontent.com/87483916/224327989-cbe927a8-c35c-48e1-99e2-6baadec00d9b.svg" width="80">
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="80">
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" width="80" />
- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg" width="80" />
- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" width="80"/>
- <img src="https://user-images.githubusercontent.com/87483916/235651549-6462c52d-2e71-4afc-9baa-e8bb05b1ddfb.png" width="80"/>
- <img src="https://user-images.githubusercontent.com/87483916/235651471-f5d27c13-0881-4cde-8001-29ad237636fc.svg" width="80"/>
- <img src="https://user-images.githubusercontent.com/87483916/235651505-baebd218-b8eb-4452-89a4-1263ac864abe.svg" width="80"/>
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg" width="80" />
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" width="80" />
+
+          
 
 </div>
 
@@ -393,7 +351,7 @@ Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoS
 
 Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
-* **Rafael Ventura** - *Idealizador do projeto* - [Dev Ventura](https://github.com/rc-ventura)
+* **Rafael Ventura** - *Responsável técnico* - [Dev Ventura](https://github.com/rc-ventura)
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
 
