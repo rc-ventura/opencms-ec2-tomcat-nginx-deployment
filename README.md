@@ -279,8 +279,9 @@ Explique que eles verificam esses testes e porquê.
 Dar exemplos
 ```
 -->
-  
-<!-->## 📦 Implantação
+
+<!-->  
+## 📦 Implantação
   
   <Br>
   
@@ -325,18 +326,13 @@ Dar exemplos
  <div  style="display: inline-block" >
 
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="80"  /> 
- <img src="src=https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="80"  />
- <img src= "https://user-images.githubusercontent.com/87483916/224327989-cbe927a8-c35c-48e1-99e2-6baadec00d9b.svg" width="80">
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="80"  />
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="80">
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" width="80" />
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg" width="80" />
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" width="80" />
 
-          
-
 </div>
-
-
 
 
 ## 🖇️ Colaborando
