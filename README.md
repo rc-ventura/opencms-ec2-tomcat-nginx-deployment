@@ -38,6 +38,8 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ### 📋 As tecnologias de pré-requisitos:
 
+<Br>
+
 * Amazon Web Services (AWS): É necessário ter uma conta na AWS para criar e gerenciar uma instância EC2. 
 <Br>
 
@@ -53,6 +55,8 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 * OpenCms: O OpenCms é um sistema de gerenciamento de conteúdo de código aberto (CMS) que oferece recursos para criar, gerenciar e publicar conteúdo em um site ou portal. 
 
 ### 📋 As tecnologias de pré-requisitos adicionais:
+
+<Br>
 
 * PostgreSQL: É um sistema de gerenciamento de banco de dados relacional de código aberto. O PostgreSQL será utilizado como o banco de dados para o OpenCMS. É necessário ter conhecimento na instalação e configuração do PostgreSQL, além de habilidades básicas de administração de banco de dados.
 
@@ -184,23 +188,22 @@ alter user postgres with password 'minhasenha';
 http://ip-publico-da-ec2:8080/opencms/setup/  
  ```
 
-#### Etapa 2: Página de 
-
-#### Etapa 3: Download do unzip
- ```
- sudo apt install -y unzip
- ```
-#### Etapa 4: Descompactar o Tomcat para um diretório
- ```
-sudo unzip apache-tomcat-9.0.75.zip -d /opt/tomcat
- ```
-
-#### Etapa 5: Navegar até a pasta /bin do Tomcat
- ```
-cd /opt/tomcat/apache-tomcat-9.0.75/bin/
- ```
+#### Etapa 2: Página de boas vindas
 
 
+
+#### Etapa 3: Checagem de requisitos
+
+
+#### Etapa 4: Conexão com Banco de Dados Postgresql
+ 
+ 
+#### Etapa 5: Acessar a aplicação OpenCms configurada
+
+
+ ```
+http://ip-publico-da-ec2:8080/opencms/opencms/overview  
+ ```
 
 ## :airplane: Roadmap
  
@@ -240,7 +243,7 @@ cd /opt/tomcat/apache-tomcat-9.0.75/bin/
 ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * PostgreSQL</a>
 ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * OpenCms </a>
 
-<!--## ⚙️ E
+<!--## 
 
 ## 📦 Implantação
   
@@ -257,12 +260,6 @@ cd /opt/tomcat/apache-tomcat-9.0.75/bin/
   * Criação do pipeline com o Jenkins CI utilizando o Docker e o DockerHub.
   * Configuração d eum webhook no github para automatização do início do pipeline CI após um gitpush no repositório.
     
-
-
-
-
-
-
     
   #### :mag: SRE 
   
