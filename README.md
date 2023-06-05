@@ -17,7 +17,7 @@ Aqui você encontrará os passos necessários para configurar a instância EC2, 
 
 Essa implantação proporciona um ambiente robusto e escalável para executar o OpenCMS na nuvem da AWS, garantindo um desempenho eficiente e uma experiência de uso aprimorada. Siga as instruções detalhadas neste repositório para realizar a implantação do OpenCMS em sua própria instância EC2.
 
-
+<!--
 <div align="center">
 
   <!-- Um imagem>
