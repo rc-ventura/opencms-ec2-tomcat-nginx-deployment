@@ -38,15 +38,15 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ### 📋 As tecnologias de pré-requisitos:
 
-#####  * Amazon Web Services (AWS): É necessário ter uma conta na AWS para criar e gerenciar uma instância EC2. 
-#####  * EC2 (Elastic Compute Cloud): É o serviço da AWS que fornece capacidade computacional redimensionável na nuvem. Você precisará criar uma instância EC2 para hospedar o OpenCMS.
-#####  * Tomcat: É um servidor web de código aberto que implementa as especificações Java Servlet e JavaServer Pages (JSP). O Tomcat será usado para executar o OpenCMS na instância EC2.
-#####  * Nginx: É um servidor web de alto desempenho, proxy reverso e balanceador de carga. O Nginx será configurado como um proxy reverso para redirecionar as solicitações do OpenCMS.
-#####  * OpenCms: O OpenCms é um sistema de gerenciamento de conteúdo de código aberto (CMS) que oferece recursos para criar, gerenciar e publicar conteúdo em um site ou portal. F
+* Amazon Web Services (AWS): É necessário ter uma conta na AWS para criar e gerenciar uma instância EC2. 
+* EC2 (Elastic Compute Cloud): É o serviço da AWS que fornece capacidade computacional redimensionável na nuvem. Você precisará criar uma instância EC2 para hospedar o OpenCMS.
+* Tomcat: É um servidor web de código aberto que implementa as especificações Java Servlet e JavaServer Pages (JSP). O Tomcat será usado para executar o OpenCMS na instância EC2.
+* Nginx: É um servidor web de alto desempenho, proxy reverso e balanceador de carga. O Nginx será configurado como um proxy reverso para redirecionar as solicitações do OpenCMS.
+* OpenCms: O OpenCms é um sistema de gerenciamento de conteúdo de código aberto (CMS) que oferece recursos para criar, gerenciar e publicar conteúdo em um site ou portal. F
 
 ### 📋 As tecnologias de pré-requisitos adicionais:
 
-#####  * PostgreSQL: É um sistema de gerenciamento de banco de dados relacional de código aberto. O PostgreSQL será utilizado como o banco de dados para o OpenCMS. É necessário ter conhecimento na instalação e configuração do PostgreSQL, além de habilidades básicas de administração de banco de dados.
+* PostgreSQL: É um sistema de gerenciamento de banco de dados relacional de código aberto. O PostgreSQL será utilizado como o banco de dados para o OpenCMS. É necessário ter conhecimento na instalação e configuração do PostgreSQL, além de habilidades básicas de administração de banco de dados.
 
 
 ### 🔧 Instalação
@@ -331,6 +331,8 @@ Dar exemplos
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" width="80" />
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg" width="80" />
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" width="80" />
+ <img src="https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/a82f684c-1a85-4e58-802f-6135abb5c3bb" width="80" />
+
 
 </div>
 
