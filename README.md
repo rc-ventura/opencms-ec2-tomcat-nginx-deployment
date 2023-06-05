@@ -180,41 +180,29 @@ alter user postgres with password 'minhasenha';
 http://ip-publico-da-ec2:8080/opencms/setup/  
  ```
 
-#### Etapa 2: Página de 
+#### Etapa 2: Página de boas vindas
+  
+    ![OpenCms Setup - Brave 05_06_2023 14_14_21](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/b566cc6c-3d55-43b2-bb0c-ebadc9abd67c)
 
-#### Etapa 3: Download do unzip
+
+#### Etapa 3:   Checagem de requisitos
+ 
+  ![OpenCms Setup - Brave 05_06_2023 14_14_32](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/25531ffb-b46e-48d6-9201-46af46fccfef)
+  
+
+#### Etapa 4: Conexão com Banco de Dados Postgresql
+  
+ ![OpenCms Setup - Brave 05_06_2023 14_14_52](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/8746e7e7-0496-4b71-8d35-1f883d1ba2bf)
+  
+### Etapa 5 : Acessar a aplicação configurada
+  
  ```
- sudo apt install -y unzip
+http://ip-publico-da-ec2:8080/opencms/overview
  ```
-#### Etapa 4: Descompactar o Tomcat para um diretório
- ```
-sudo unzip apache-tomcat-9.0.75.zip -d /opt/tomcat
- ```
-
-#### Etapa 5: Navegar até a pasta /bin do Tomcat
- ```
-cd /opt/tomcat/apache-tomcat-9.0.75/bin/
- ```
+  
+  https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/7dca046c-be0d-48ed-95a5-b357f5011f18
 
 
-## :scroll: Funcionalidades
-
-<Br>
-
-<!--
-
-* Conversor de câmbio entre um par de moedas.
-
-
-<Br>
-<Br>
-
-
-* Salvando transações de conversão no banco de dados.
-
-https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-b85e-2c733daf2f98.mp4
-
--->
 
 ## :airplane: Roadmap
  
@@ -254,77 +242,34 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
 ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * PostgreSQL</a>
 ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * OpenCms </a>
 
-<!--## ⚙️ Executando os testes
-<Br>
-  
-* Overview dos testes feitos em Junit, Mockito, Rest Assured
-<Br>
-   
- <div  style="display: inline-block" >
 
-  
-</div>
-  
-  
-<!-- Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
--->
-
-<!-- 
 ## 📦 Implantação
   
   <Br>
-  
+
+    
 <div align="center">
  
-  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/8ce8a791-f8fc-4e4d-8d05-8cc90a121330)
+
 
   
 </div> 
   
   <Br>
   
-  #### :crystal_ball: DEVOPS
+  #### :eyes: Página de Boas Vindas: 
     
-  * Utilizando o Terraform provisiona uma infra-estrutura básica na  Digital Ocean.
-  * Criação de um cluster kubernetes com três serviços: backend, frontend e bancode dados
-  * Criação de 3 réplicas do backend e do frontend para escalonamento
-  * Criação de um load balancer aberto para internet que balanceia a carga para o frontend na porta 80 (http)
-  * Provisionamento de um máquina virtual (Droplet) para configurar a orquestração com o Jenkins.
-  * Criação do pipeline com o Jenkins CI utilizando o Docker e o DockerHub.
-  * Configuração d eum webhook no github para automatização do início do pipeline CI após um gitpush no repositório.
-    
-  #### :mag: SRE 
+
+  #### :mag: 
+
+  #### :computer: Conexão com Banco de Dados Postgresql
   
- * Criação de observabilidade utlizando o Helm para configurar o cluster Kubernetes.
- * Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para a porta 9090 (prometheus) 
- * Criação um load balancer aberto para requisições http na porta 80 e redirecionamento para 3000 (grafana).
- * Criação dos dashboards das métricas funcionais e não funcionais da aplicação.
-  
-  #### :computer: DEV
-  
- * Promove alterações no código e ativa o trigger do pipeline.
- * Manutenção e implementação dos testes unitários 
- * Promove a cobertura do código nos testes.
+ ![OpenCms Setup - Brave 05_06_2023 14_14_52](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/8746e7e7-0496-4b71-8d35-1f883d1ba2bf)
+
   
 <Br>
 
--->
+
 
 ## 🛠️ Tecnologias
 
