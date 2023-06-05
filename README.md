@@ -270,17 +270,22 @@ http://ip-publico-da-ec2:8080/opencms/opencms/overview
   #### :crystal_ball: Docker
     
   
-    
+  ![----_-Em Construção  ](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/249d676a-b9dd-48bf-ba4e-a9811bb59b2f)
+
     
   #### :mag: Terraform 
   
- 
-  
-  #### :computer: OpenCms
+ ![----_-Em Construção  ](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/7025d250-223d-40e0-9cae-2284ec976905)
 
-  
-  #### :computer:  Nginx
+ #### :computer: OpenCms
 
+  ![----_-Em Construção  ](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/b24d7d98-f411-45a0-8fe1-a15357b10529)
+
+ #### ::palm_tree::  Nginx e Tomcat
+
+![----_-Em Construção  ](https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/6d14b2f8-1bcd-4234-8c39-c3a7d7626cc6)
+
+ #### ::leaves::  Postgresql
 
 
 <Br>
