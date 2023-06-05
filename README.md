@@ -40,12 +40,16 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 * Amazon Web Services (AWS): É necessário ter uma conta na AWS para criar e gerenciar uma instância EC2. 
 <Br>
+
 * EC2 (Elastic Compute Cloud): É o serviço da AWS que fornece capacidade computacional redimensionável na nuvem. Você precisará criar uma instância EC2 para hospedar o OpenCMS.
 <Br>
+
 * Tomcat: É um servidor web de código aberto que implementa as especificações Java Servlet e JavaServer Pages (JSP). O Tomcat será usado para executar o OpenCMS na instância EC2.
 <Br>
+
 * Nginx: É um servidor web de alto desempenho, proxy reverso e balanceador de carga. O Nginx será configurado como um proxy reverso para redirecionar as solicitações do OpenCMS.
 <Br>
+
 * OpenCms: O OpenCms é um sistema de gerenciamento de conteúdo de código aberto (CMS) que oferece recursos para criar, gerenciar e publicar conteúdo em um site ou portal. 
 
 ### 📋 As tecnologias de pré-requisitos adicionais:
@@ -197,24 +201,6 @@ cd /opt/tomcat/apache-tomcat-9.0.75/bin/
  ```
 
 
-## :scroll: Funcionalidades
-
-<Br>
-
-<!--
-
-* Conversor de câmbio entre um par de moedas.
-
-
-<Br>
-<Br>
-
-
-* Salvando transações de conversão no banco de dados.
-
-https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-b85e-2c733daf2f98.mp4
-
--->
 
 ## :airplane: Roadmap
  
@@ -254,50 +240,12 @@ https://user-images.githubusercontent.com/87483916/224570140-59ec3d15-2057-4b94-
 ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * PostgreSQL</a>
 ##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * OpenCms </a>
 
-<!--## ⚙️ Executando os testes
-<Br>
-  
-* Overview dos testes feitos em Junit, Mockito, Rest Assured
-<Br>
-   
- <div  style="display: inline-block" >
+<!--## ⚙️ E
 
-  
-</div>
-  
-  
-<!-- Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
--->
-
-<!-- 
 ## 📦 Implantação
   
   <Br>
   
-<div align="center">
- 
-  ![Deploy-Currency-Converter drawio](https://github.com/rc-ventura/CurrencyConverter_CI-CD-K3D/assets/87483916/8ce8a791-f8fc-4e4d-8d05-8cc90a121330)
-
-  
-</div> 
-  
-  <Br>
   
   #### :crystal_ball: DEVOPS
     
@@ -308,6 +256,13 @@ Dar exemplos
   * Provisionamento de um máquina virtual (Droplet) para configurar a orquestração com o Jenkins.
   * Criação do pipeline com o Jenkins CI utilizando o Docker e o DockerHub.
   * Configuração d eum webhook no github para automatização do início do pipeline CI após um gitpush no repositório.
+    
+
+
+
+
+
+
     
   #### :mag: SRE 
   
