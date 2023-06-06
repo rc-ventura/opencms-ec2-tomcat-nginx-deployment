@@ -63,6 +63,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 * PostgreSQL: É um sistema de gerenciamento de banco de dados relacional de código aberto. O PostgreSQL será utilizado como o banco de dados para o OpenCMS. É necessário ter conhecimento na instalação e configuração do PostgreSQL, além de habilidades básicas de administração de banco de dados.
 
+<Br>
 
 ### 🔧 Instalação
 
@@ -240,15 +241,13 @@ sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default-or
 export MY_PUBLIC_DNS={dns-público-ec2}
 
  ```
+ ```
 exemplo: $ export MY_PUBLIC_DNS=ec2-3-85-18-73.compute-1.amazonaws.com
-
+```
 
 #### Etapa 5: Edição do arquivo default com o proxy pass usando o comando echo
 
 ```
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default-original
- ```
- ```
 sudo echo "
 server {
     listen 80;
@@ -259,13 +258,13 @@ server {
 }" >>  /etc/nginx/sites-available/default
  ```
 
-#### Etapa 6: # Reinicialização do serviço do Nginx
+#### Etapa 6: Reinicialização do serviço do Nginx
 
 ```
 sudo service nginx restart
 
 ```
-#### Etapa 7: # Verificação do status do Nginx
+#### Etapa 7:  Verificação do status do Nginx
 
 ```
 sudo systemclt status nginx
@@ -275,7 +274,9 @@ sudo systemclt status nginx
 ```
 http://dns-publico-ec2
 ```
-
+```
+exemplo: http://ec2-3-85-18-73.compute-1.amazonaws.com
+```
 ## :airplane: Roadmap
  
 - [x] Configurar uma instância EC2 na AWS com a AMI mais recente do Ubuntu LTS.
