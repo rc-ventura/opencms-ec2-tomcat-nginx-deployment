@@ -67,7 +67,6 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ### 🔧 Instalação
 
-
 #### :anger: Subindo uma máquina EC2 na AWS:
 <hr>
 
