@@ -184,9 +184,9 @@ alter user postgres with password 'minhasenha';
 
 #### Etapa 1: Acessar o modo Wizard do OpenCms
  
- * Primeiro certifique-se que o servidor Tomcat está incializado. Caso tenha dúvida de como realizar esta etapa volte a seção <a href="#">Instalando e configurando um servidor TOMCAT</a>
+ * Primeiro certifique-se que o servidor Tomcat está incializado. Caso tenha dúvida de como realizar esta etapa volte a seção <a href="https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment#anger-instalando-e-configurando-um-servidor-tomcat">Instalando e configurando um servidor Tomcat</a>
 
- * Para maiores detalhes sobre a implantação, avance a seção <a href="#" > Implantação </a>
+ * Para maiores detalhes sobre implantação bem como alternativas para implantação, avance para seção <a href="https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment#-implanta%C3%A7%C3%A3o" > Implantação </a>
 
 
  ```
@@ -210,31 +210,88 @@ http://ip-publico-da-ec2:8080/opencms/setup/
 
 
  ```
-http://ip-publico-da-ec2:8080/opencms/opencms/overview  
+http://ip-publico-da-ec2:8080/opencms/overview  
  ```
   
 
 #### :anger: Instalando e configurando o Nginx:
 <hr>
 
+#### Etapa 1:  Atualiza os pacotes disponíveis no sistema
+
+ ```
+sudo apt-get update
+ ```
+
+#### Etapa 2:  Instalar o Nginx
+
+ ```
+sudo apt install -y nginx
+ ```
+#### Etapa 3: Criação de uma cópia do arquivo default
+
+ ```
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default-original
+ ```
+
+#### Etapa 4: Criar uma variável de ambiente para o IP púlico da EC2
+
+```
+export MY_PUBLIC_DNS={dns-público-ec2}
+
+ ```
+exemplo: $ export MY_PUBLIC_DNS=ec2-3-85-18-73.compute-1.amazonaws.com
 
 
+#### Etapa 5: Edição do arquivo default com o proxy pass usando o comando echo
+
+```
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default-original
+ ```
+ ```
+sudo echo "
+server {
+    listen 80;
+    server_name $MY_PUBLIC_DNS; 
+    location / {
+        proxy_pass http://localhost:8080/opencms/overview;
+    }
+}" >>  /etc/nginx/sites-available/default
+ ```
+
+#### Etapa 6: # Reinicialização do serviço do Nginx
+
+```
+sudo service nginx restart
+
+```
+#### Etapa 7: # Verificação do status do Nginx
+
+```
+sudo systemclt status nginx
+```
+#### Etapa 8:  Acessar a aplicação OpenCms para testar o proxy reverso
+
+```
+http://dns-publico-ec2
+```
 
 ## :airplane: Roadmap
  
 - [x] Configurar uma instância EC2 na AWS com a AMI mais recente do Ubuntu LTS.
 - [x] Liberar as portas necessárias (8080, 5432, 80, 443, 22) no grupo de segurança associado à instância EC2.
-- [ ] Instalar e configurar o servidor Tomcat na instância EC2.
-- [ ] Instalar e configurar o PostgreSQL como banco de dados na instância EC2.
+- [x] Instalar e configurar o servidor Tomcat na instância EC2.
+- [x] Instalar e configurar o PostgreSQL como banco de dados na instância EC2.
 - [ ] Configurar e testar a conexão entre o Tomcat e o PostgreSQL.
-- [ ] Fazer o download e configurar o pacote de instalação do OpenCMS.
-- [ ] Realizar a implantação do OpenCMS no Tomcat.
+- [x] Fazer o download e configurar o pacote de instalação do OpenCMS.
+- [x] Realizar a implantação do OpenCMS no Tomcat.
 - [ ] Configurar o servidor Nginx como um proxy reverso para redirecionar as solicitações do OpenCMS.
 - [ ] Testar a configuração do Nginx e verificar se o OpenCMS está acessível através do proxy reverso.
 - [ ] Configurar um cenário local no arquivo hosts para mapear o domínio da aplicação para o endereço IP da instância EC2.
 - [ ] Acessar a instalação do OpenCMS através do domínio configurado localmente, verificando se a aplicação está funcionando corretamente.
-- [ ] Executar o comando terraform init para inicializar o projeto Terraform.
-- [ ] Executar o comando terraform plan para visualizar as alterações que serão aplicadas.
+- [x] Acessar a instalação do OpenCMS através do domínio configurado remotamente, verificando se a aplicação está funcionando corretamente.
+- [x] Executar o comando terraform init para inicializar o projeto Terraform.
+- [x] Executar o comando terraform plan para visualizar as alterações que serão aplicadas.
 - [ ] Executar o comando terraform apply para criar e provisionar a infraestrutura na AWS.
 - [ ] Verificar se a infraestrutura foi criada corretamente e se a aplicação está acessível através do domínio configurado.
 - [ ] Criar um arquivo Dockerfile para a construção da imagem do OpenCMS.
@@ -251,12 +308,12 @@ http://ip-publico-da-ec2:8080/opencms/opencms/overview
 
 ## :book: Documentação
   
-##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Amazon Web Services (AWS)</a> 
-##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * EC2 (Elastic Compute Cloud)</a>
-##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Tomcat </a>
-##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * Nginx </a>
-##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * PostgreSQL</a>
-##### <a href="https://www.oracle.com/br/java/technologies/downloads"> * OpenCms </a>
+##### <a href="https://docs.aws.amazon.com/"> * Amazon Web Services (AWS)</a> 
+##### <a href="https://docs.aws.amazon.com/ec2/?icmpid=docs_homepage_featuredsvcs"> * EC2 (Elastic Compute Cloud)</a>
+##### <a href="https://tomcat.apache.org/"> * Tomcat </a>
+##### <a href="https://docs.nginx.com/"> * Nginx </a>
+##### <a href="https://www.postgresql.org/docs/"> * PostgreSQL</a>
+##### <a href="https://documentation.opencms.org/opencms-documentation/introduction/get-started/"> * OpenCms </a>
 
 
 
