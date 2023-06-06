@@ -1,0 +1,33 @@
+# Tutorial para utilizar um snapshot da máquina virtual configurada com todos os serviços aqui elencados.
+
+SNAPSHOT = ami-0365eac8e5e36e77b
+
+
+1. Faça login na AWS Console: Acesse a AWS Console em https://console.aws.amazon.com e faça login com suas credenciais.
+
+2. Navegue até o serviço EC2: No painel de controle da AWS, navegue até o serviço EC2 clicando em "EC2" na seção "Compute" ou pesquisando por "EC2" na barra de pesquisa.
+
+3. Inicie a criação de uma instância: Clique no botão "Launch Instance" para iniciar o assistente de criação de instâncias.
+
+4. Escolha uma AMI pública: 
+
+        * Na tela "Step 1: Choose an Amazon Machine Image (AMI)", 
+        * Selecione a guia "AWS Marketplace" ou "Quick Start" para explorar as AMIs públicas disponíveis.
+        * Você pode pesquisar por palavras-chave ou filtrar por categoria para encontrar a AMI desejada.
+
+5. Selecione o tipo de instância: Após escolher uma AMI, clique em "Select" para prosseguir. Na tela "Step 2: Choose an Instance Type", selecione o tipo de instância desejado (por exemplo, t2.micro) e clique em "Next" para avançar.
+
+6. Configure a instância: Nas telas subsequentes, você pode configurar várias opções, como a configuração de rede, armazenamento e tags. Preencha as opções conforme necessário e clique em "Next" para avançar em cada etapa.
+
+7. Configure as regras de segurança: Na tela "Step 6: Configure Security Group", defina as regras de segurança para permitir o tráfego de rede na instância. Por exemplo, você pode permitir conexões SSH (porta 22) e HTTP (porta 80). Certifique-se de configurar as regras de segurança adequadas para suas necessidades.
+
+8. Revise e lance a instância: Na tela "Step 7: Review Instance Launch", revise todas as configurações da instância. Se estiver tudo correto, clique em "Launch" para iniciar a criação da instância EC2.
+
+9. Selecione uma chave de acesso: Na próxima tela, escolha uma chave de acesso existente ou crie uma nova. A chave de acesso é usada para acessar a instância via SSH. Clique em "Launch Instances" para finalizar a criação da instância.
+
+10. Aguarde a inicialização da instância: Após o lançamento da instância, aguarde alguns momentos para que ela seja inicializada. Você poderá ver o status da instância na seção "Instances" do painel EC2.
+
+Após seguir esses passos, você terá uma instância EC2 implantada com a AMI pública escolhida. Você pode acessar a instância usando uma chave de acesso SSH e configurar ou executar seus aplicativos nela conforme necessário. Lembre-se de monitorar os custos e desligar ou encerrar as instâncias quando não estiverem mais em uso para evitar cobranças desnecessárias.
+
+11. Faça uma conexão SSH para a respectiva instância EC2.
+
