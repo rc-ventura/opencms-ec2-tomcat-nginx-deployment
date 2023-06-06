@@ -6,7 +6,7 @@ resource "aws_instance" "ec2-postgres-nginx-opencms"{
     key_name = aws_key_pair.terraform_aws_auth.id
     vpc_security_group_ids = [aws_security_group.main_security_group.id]
     subnet_id = aws_subnet.main_public_subnet.id
-    user_data = var.user_data_file
+    user_data = "userdata.tpl"
 
     
   root_block_device {
@@ -62,7 +62,7 @@ resource "aws_vpc" "main_vpc" {
 #Subnet
 resource "aws_subnet" "main_public_subnet" {
   vpc_id                  = aws_vpc.main_vpc.id
-  cidr_block              = "10.0.0.1/24"
+  cidr_block              = "10.0.0.0/24"
   map_public_ip_on_launch = true
   availability_zone       = "us-east-1a"
 
@@ -74,8 +74,8 @@ resource "aws_subnet" "main_public_subnet" {
 
 #Interface Ip Privates
 resource "aws_network_interface" "ec2-cluster-ip" {
-  subnet_id   = var.subnet_id
-  private_ips = ["${var.instance_name}.0.100"]
+  subnet_id   = aws_subnet.main_public_subnet.id
+  private_ips = ["10.0.0.100"]
 
   tags = {
     "Name" = "ec2-${var.project}-primary_network_interface"
@@ -99,7 +99,26 @@ resource "aws_security_group" "main_security_group" {
       cidr_blocks = ["0.0.0.0/0"]
   }
   }
+    dynamic "egress" {
+        for_each = var.sg_egress_ports
+    content {
+            description      = "No limit outbound traffic"
+            from_port        = egress.value
+            to_port          = egress.value
+            protocol         = "tcp"
+            cidr_blocks      = ["0.0.0.0/0"]
+            ipv6_cidr_blocks = ["::/0"]
+  }
+  }
 
+  tags = {
+     "Name" = "${var.project}-dynamic-sg"
+     "Environment" =  var.env
+    
+  }
+
+
+}
 #IGW
 resource "aws_internet_gateway" "main_internet_gateway" {
   vpc_id = aws_vpc.main_vpc.id
@@ -136,23 +155,6 @@ resource "aws_route_table_association" "main_public_association" {
 
 }
 
-  dynamic "egress" {
-    for_each = var.sg_egress_ports
-   content {
-        description      = "No limit outbound traffic"
-        from_port        = egress.value
-        to_port          = egress.value
-        protocol         = "tcp"
-        cidr_blocks      = ["0.0.0.0/0"]
-        ipv6_cidr_blocks = ["::/0"]
-  }
-  }
+     
 
-  tags = {
-     "Name" = "${var.project}-dynamic-sg"
-     "Environment" =  var.env
-    
-  }
-   
 
-}

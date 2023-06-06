@@ -3,7 +3,7 @@
 variable "project" {
   description = "value"
   type        = string
-  default = "openCMS-nginx-postgres"
+  default = "openCMS-project"
 }
 
 variable "profile" {
@@ -20,7 +20,6 @@ variable "sg_ingress_ports" {
 }
 
 
-
 variable "sg_egress_ports" {
   type = list(number)
   description = "list of egress ports"
@@ -32,20 +31,14 @@ variable "sg_egress_ports" {
 variable "env" {
   type = string
   description = "environment to deploy"
+  default = "dev"
 }
 
 
-variable "user_data_file" {
-  //type = string
-  //default = file("../../modules/instances/userdata.tpl")
-}
-
-
-
- variable "env" {
-    description = "provisioned environment"
-    type = string
-}
+//variable "user_data_file" {
+ // type = string
+  //default = file("./userdata.tpl")
+//}
 
 
 
