@@ -234,7 +234,13 @@ sudo apt install -y nginx
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default-original
  ```
 
-#### Etapa 4: Criar uma variável de ambiente para o IP púlico da EC2
+ #### Etapa 4:  Apagar todo conteúdo do arquivo default
+```
+sudo truncate -s 0 /etc/nginx/sites-available/default
+ ```
+
+
+#### Etapa 5: Criar uma variável de ambiente para o IP púlico da EC2
 
 ```
 export MY_PUBLIC_DNS={dns-público-ec2}
@@ -244,7 +250,7 @@ export MY_PUBLIC_DNS={dns-público-ec2}
 exemplo: $ export MY_PUBLIC_DNS=ec2-3-85-18-73.compute-1.amazonaws.com
 ```
 
-#### Etapa 5: Edição do arquivo default com o proxy pass usando o comando echo
+#### Etapa 6: Edição do arquivo default com o proxy pass usando o comando echo
 
 ```
 sudo echo "
@@ -257,18 +263,18 @@ server {
 }" >>  /etc/nginx/sites-available/default
  ```
 
-#### Etapa 6: Reinicialização do serviço do Nginx
+#### Etapa 7: Reinicialização do serviço do Nginx
 
 ```
 sudo service nginx restart
 
 ```
-#### Etapa 7:  Verificação do status do Nginx
+#### Etapa 8:  Verificação do status do Nginx
 
 ```
 sudo systemclt status nginx
 ```
-#### Etapa 8:  Acessar a aplicação OpenCms para testar o proxy reverso
+#### Etapa 9:  Acessar a aplicação OpenCms para testar o proxy reverso
 
 ```
 http://dns-publico-ec2
