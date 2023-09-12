@@ -1,11 +1,8 @@
 <div align="center">
   
-<!--![Converta-me_cover](https://user-images.githubusercontent.com/87483916/224345890-7077b778-878c-42cb-9292-2590de454519.png)
 
+<img src= "https://github.com/rc-ventura/opencms-ec2-tomcat-nginx-deployment/assets/87483916/04d8ed98-5734-437a-86fe-95734e700ac5" width="800" height="500" alt=" servidor cloud">
 
-
-<img src= "./frontend/assets/currency_theme_white-trim.png" width="850" height="300" alt=" rosto de uma presidente americano em uma moeda">
--->
 
 </div>
 
