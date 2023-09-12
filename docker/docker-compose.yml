@@ -8,9 +8,11 @@ services:
         volumes:
             - ~/dockermount/opencms-docker-mysql:/var/lib/mysql
         environment:
-            - "MYSQL_ROOT_PASSWORD=secretDBpassword"
+            - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
         networks:
             - opencms-net
+
+
     opencms:
         image: alkacon/opencms-docker:15.0
         container_name: opencms
@@ -25,10 +27,32 @@ services:
             - ~/dockermount/opencms-docker-webapps:/usr/local/tomcat/webapps
         command: ["/root/wait-for.sh", "mysql:3306", "-t", "30", "--", "/root/opencms-run.sh"]
         environment:
-             - "DB_PASSWD=secretDBpassword"
+             - "DB_PASSWD=${DB_PASSWD}"
         networks:
             - opencms-net
 
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        ports:
+            - 8080:80
+        depends_on:
+            - mariadb
+        links:
+            - "mariadb:mysql"
+        environment:
+            - "MYSQL_ROOT_PASSWORD= ${MYSQL_ROOT_PASSWORD}"
+            -  PMA_HOST=mariadb  
+
+            
+        networks:
+            - opencms-net
+
+volumes:
+    mysql-data:
+    webapps:
+
 networks:
     opencms-net: 
+        driver: bridge
         
